@@ -20,7 +20,6 @@ int main()
 		}
 
 		cout << total << endl;
-		getchar();
 		return 0;
 	}
 	else {
