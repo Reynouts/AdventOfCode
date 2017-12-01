@@ -14,5 +14,4 @@ shift = len(input)/2 # for first puzzle, shift = 1
 for idx, c in enumerate(input):
 	if int(c) == int(input[(idx+shift)%len(input)]):
 		total = total + int(c)
-
 print total
