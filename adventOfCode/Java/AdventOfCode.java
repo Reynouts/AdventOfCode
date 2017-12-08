@@ -1,12 +1,16 @@
 package adventOfCode;
 
+import java.awt.List;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class AdventOfCode {
 
@@ -15,7 +19,8 @@ public class AdventOfCode {
 		solveDay2part1();
 		solveDay2part2();
 		solveDay3(289326, true); //my number is 289326
-
+		solveDay4();
+		solveDay5();
 	}
 	
 	//////////////////////////
@@ -220,6 +225,7 @@ public class AdventOfCode {
 	
 	public static int calculateSurrounding(int[][] array, int x, int y) {
 		//calculate sum of all surrounding squares for a target square array[x,y]
+		//should have used a smarter loop..
 		int sum = 0;
 		
 		if(y+1 < array.length) {
@@ -254,6 +260,65 @@ public class AdventOfCode {
 		return sum;
 	}
 	
+	//////////////////////////
+	// DAY 4 --- 04-12-2017 //
+	//////////////////////////
+	public static boolean checkDuplicate(String[] words) {
+		for(int i = 0; i < words.length; i++) {
+			for(int j = i+1; j < words.length; j++) {
+				if(words[i].equals(words[j]) && i != j) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	public static void solveDay4() {	
+		String input = readFileSafe("Day4.txt");
+		String[] phrases = input.split("\n");
+		int amountOfPhrases = phrases.length;
+		int duplicates = 0;
+		System.out.println(amountOfPhrases);
+		for(String phrase: phrases) {
+			if(checkDuplicate(phrase.split(" "))) {
+				duplicates++;
+			}
+		}
+		System.out.println("Day 4.1");
+		System.out.println(" Amount of right pass phrases: " + duplicates);
+		System.out.println(" Amount of right pass phrases: " + (amountOfPhrases-duplicates));
+	}
+	
+	//////////////////////////
+	// DAY 5 --- 05-12-2017 //
+	//////////////////////////
+	public static void solveDay5() {
+		String input = readFileSafe("Day5.txt");
+		String[] lines = input.split("\\r?\\n");
+		int[] numbers = new int[lines.length];
+		for (int i = 0; i<numbers.length; i++) {
+			numbers[i] = Integer.parseInt(lines[i]);
+		}
+		//System.out.println(numbers[5]);
+		
+		int index = 0;
+		int steps = 0;
+		int counter = 0;
+		while(index > -1 && index < numbers.length) {
+			steps = numbers[index];
+			if (steps >= 3) {
+				numbers[index]--;
+			}
+			else {
+				numbers[index]++;
+			}
+			index = index + steps;
+			counter++;
+		}
+		System.out.println(counter);
+	}
+
 	////////////////////////////////////
 	// Some crappy helper functions.. //
 	////////////////////////////////////

@@ -21,4 +21,5 @@ invalidPhrases = 0
 for phrase in phrases:
 	if checkPhraseForAnagram(phrase):
 		invalidPhrases = invalidPhrases+1		
+print "Duplicates: " + str(invalidPhrases)
 print "Valid phrases: " + str(len(phrases)-invalidPhrases)
