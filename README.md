@@ -13,3 +13,4 @@ Trying to solve the puzzles of Advent of Code 2017
 * 06-12-2017: Day6 finished (solution in Python)
 * 07-12-2017: Day7 finished (solution in Python) Challenging assignment!
 * 08-12-2017: Day8 finished (solution in Python)
+* 09-12-2017: Day9 finished (solution in Python)
