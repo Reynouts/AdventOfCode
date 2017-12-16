@@ -42,9 +42,9 @@ def main():
 	#runs isolated (without part 2) in about 48 seconds
 	
 	# part 2, being picky and doing 5M cycles
-	cycles = 5000000
-	count = part(genA, genB, multiA, multiB, divider, cycles, modA, modB, True)
-	print "Part 2: found {} matches".format(count)
+	#cycles = 5000000
+	#count = part(genA, genB, multiA, multiB, divider, cycles, modA, modB, True)
+	#print "Part 2: found {} matches".format(count)
 	#runs isolated (without part 1) in about 33 seconds
 
 if __name__ == "__main__":
