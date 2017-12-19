@@ -21,4 +21,6 @@ Trying to solve the puzzles of Advent of Code 2017
 * 14-12-2017: Day14 finished (solution in Python)
 * 15-12-2017: Day15 finished (solution in C++, Java and Python) Performance test!
 * 16-12-2017: Day16 finished (solution in Python)
-* 17-12-2017: Day17 finished (solution in Python)
+* 17-12-2017: Day17 finished (solution in Python) JIT update (0.7s vs 6s)
+* 18-12-2017: Day18 finished (solution in Python) ugly.. needs some rethinking
+* 19-12-2017: Day19 finished (solution in Python) EZ
